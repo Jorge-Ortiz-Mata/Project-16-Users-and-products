@@ -1,0 +1,36 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <form>
+    <div class="m-10 w-auto mb-6  flex flex-col">
+      <div>
+        <%= form.label :full_name, style: "display: block", class:"block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4" %><br>
+        <%= form.text_field :full_name, placeholder:"Taylor Smith", class:"bg-gray-200 w-96 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" %>
+      </div>
+      <br><br>      
+      <div>
+        <%= form.label :age, style: "display: block", class:"block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4" %><br>
+        <%= form.text_field :age, placeholder:"25", class:"bg-gray-200 w-96 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" %>
+      </div>
+      <br><br>
+      <div>
+        <%= form.label :twitter, style: "display: block", class:"block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4" %><br>
+        <%= form.text_field :twitter, placeholder:"@taylor-smith", class:"bg-gray-200 w-96 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" %>
+      </div>
+      <br><br>
+      <div>
+        <%= form.submit class:"shadow bg-green-700 hover:bg-green-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" %>
+      </div><br>
+    </div>
+  </form>
+<% end %>

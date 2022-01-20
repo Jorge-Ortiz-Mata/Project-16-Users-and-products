@@ -1,0 +1,32 @@
+<% provide(:title, "Home") %>
+<% provide(:p, "Well, on this Ruby on Rails application, you will be able to add users and products. 
+            Regarding with users, you will get some information about them, such as names, ages and twitter accounts. 
+            Besides, you can add products or see which product belongs to a specific user.") %>
+
+
+<div class="bg-white dark:bg-gray-500 ">
+    <div class="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
+        <h1 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+            <span class="block">
+                Users and products.
+            </span><br>
+            <span class="block text-red-300">
+                Want's to add something?<br>
+                It's today or never.
+            </span>
+        </h1><br><br>
+        <p class="text-xl mt-4 max-w-md mx-auto text-gray-100">
+            <%= yield(:p) %>
+        </p><br><br>
+        <div class="lg:mt-0 lg:flex-shrink-0">
+            <div class="mt-12 inline-flex rounded-md">
+                <p class="mx-10">
+                    <%= link_to "Users", users_path, class:"shadow py-4 px-6 bg-red-800 hover:bg-red-500 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg " %>
+                </p>
+                <p class="mx-10">
+                    <%= link_to "Products", products_path, class:"shadow py-4 px-6 bg-red-800 hover:bg-red-500 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg " %>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<header>
+    <nav class="relative bg-white text-gray-900 flex justify-between">
+        <div class="container mx-auto flex">
+            <%= link_to "Home", root_path, class:"relative block p-4 lg:p-6 text-xl text-red-700 font-bold hover:text-red-500" %>
+            <%= link_to "About", pages_about_path, class:"relative block p-4 lg:p-6 text-xl text-red-700 font-normal hover:text-red-500" %>
+            <%= link_to "Contact", pages_contact_path, class:"relative block p-4 lg:p-6 text-xl text-red-700 font-normal hover:text-red-500" %>
+        </div>
+        <div class="container mx-auto flex">
+            <%= link_to "Users", users_path, class:"relative p-4 lg:p-6 text-xl text-red-700 font-normal hover:text-red-500 ml-auto mr-10" %>
+            <%= link_to "Products", products_path, class:"relative p-4 lg:p-6 text-xl text-red-700 font-normal hover:text-red-500 mr-10" %>
+        </div>
+    </nav>
+</header>
